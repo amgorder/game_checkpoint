@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Game Check Point</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header class="container-fluid text-center">
+        <h1>MOON MINER</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Moon Collection</h4>
+                        <p class="card-text">info and stuff</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Resources: <span id="resources">0</span></li>
+                        <li class="list-group-item">Moon Rocks:<span id="moon_rocks">0</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4 card text-left">
+                <img onclick="moonClick()" class="card-img-top" src="space_pic.jpg" alt="">
+                <div class="card-body">
+                    <h4 class="card-title">Click on Image to begin minning!</h4>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+
+                    <div class="card-body">
+                        <h4 class="card-title">Moon Rock Multipliers!</h4>
+                        <p class="card-text">Purchase 50 Moon Rocks to double your Resources. </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Moon Rock: <button onclick="mod1()">5</button> Cost:<span
+                                id="mr1-price"></span></li>
+                        <li class="list-group-item">Moon Rock: <button onclick="mod2()">10</button> Cost:<span
+                                id="mr2-price"></span></li>
+                        <li class="list-group-item">Moon Rock: <button onclick="mod3()">15</button> Cost:<span
+                                id="mr3-price"></span></li>
+                        <li class="list-group-item">Moon Rock: <button onclick="mod4()">20</button> Cost:<span
+                                id="mr4-price"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

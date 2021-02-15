@@ -43,53 +43,59 @@ function mod1(){
         resources -= store.moonRocks1.price
         moonRocks += store.moonRocks1.modifier
         store.moonRocks1.price++
+        setInterval(moonRockMultiplier1, 3000)
     }
-    draw()
-    moonRockMultiplier1()
+    draw() 
 }
 function moonRockMultiplier1(){ 
         resources += store.moonRocks1.modifier
         document.getElementById("multi").innerHTML = `${store.moonRocks1.modifier}`
-        draw()
-        threeSecInter()
+        draw() 
     }  
-        let threeSec
-        function threeSecInter() {
-            threeSec = setInterval(moonRockMultiplier1, store.moonRocks1.seconds)
-            endThreeSecInter()
-        }
-        let endThreeSec
-        function endThreeSecInter() {
-            endThreeSec = clearInterval(threeSec)
-        }
-
-
-
 
 function mod2(){
     if(resources >= store.moonRocks2.price){
         resources -= store.moonRocks2.price
         moonRocks += store.moonRocks2.modifier
         store.moonRocks2.price++
+        setInterval(moonRockMultiplier2, 3000)
     }
     draw()
 }
+function moonRockMultiplier2(){ 
+    resources += store.moonRocks2.modifier
+    document.getElementById("multi").innerHTML = `${store.moonRocks2.modifier}`
+    draw()
+}  
 function mod3(){
     if(resources >= store.moonRocks3.price){
         resources -= store.moonRocks3.price
         moonRocks += store.moonRocks3.modifier
         store.moonRocks3.price++
+        setInterval(moonRockMultiplier3, 3000)
     }
     draw()
 }
+function moonRockMultiplier3(){ 
+    resources += store.moonRocks3.modifier
+    document.getElementById("multi").innerHTML = `${store.moonRocks3.modifier}`
+    draw()
+}  
 function mod4(){
     if(resources >= store.moonRocks4.price){
         resources -= store.moonRocks4.price
         moonRocks += store.moonRocks4.modifier
         store.moonRocks4.price++
+        setInterval(moonRockMultiplier4, 3000)
     }
     draw()
 }
+function moonRockMultiplier4(){ 
+    resources += store.moonRocks4.modifier
+    document.getElementById("multi").innerHTML = `${store.moonRocks4.modifier}`
+    draw()
+}  
+
 function draw(){
     document.getElementById("resources").innerHTML = `${resources}`
     document.getElementById("moon_rocks").innerHTML = `${moonRocks}`
@@ -103,3 +109,4 @@ function draw(){
 }
 //page refresh
 draw()
+setTimeout(moonRockMultiplier1, 30000)

@@ -15,17 +15,17 @@
 
 <body>
 
-    <header class="container-fluid text-center">
+    <header class="container-fluid text-center bg-dark text-light">
         <h1>MOON MINER</h1>
     </header>
-    <main class="container-fluid">
+    <main class="container-fluid bg-secondary">
         <div class="row">
             <div class="col-4"></div>
             <div class="col-4"></div>
             <div class="col-4"></div>
         </div>
         <div class="row">
-            <div class="col-4">
+            <div class="col-4 p-5">
                 <div class="card">
 
                     <div class="card-body">
@@ -35,16 +35,18 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Resources: <span id="resources">0</span></li>
                         <li class="list-group-item">Moon Rocks:<span id="moon_rocks">0</span></li>
+                        <li class="list-group-item"><span id="multi">0</span> Resources per 3 Seconds</li>
+
                     </ul>
                 </div>
             </div>
-            <div class="col-4 card text-left">
-                <img onclick="moonClick()" class="card-img-top" src="space_pic.jpg" alt="">
+            <div class="col-4 p-3 card text-left">
+                <img onclick="moonClick()" class="card-img-top img-fluid" src="space_pic.jpg" alt="">
                 <div class="card-body">
                     <h4 class="card-title">Click on Image to begin minning!</h4>
                 </div>
             </div>
-            <div class="col-4">
+            <div class="col-4 p-5">
                 <div class="card">
 
                     <div class="card-body">
@@ -67,10 +69,10 @@
 
 
     </main>
-    <footer class="container-fluid">
+    <footer class="container-fluid bg-dark">
         <div class="row">
             <div class="col">
-
+                <p>Stay Golden</p>
             </div>
         </div>
     </footer>

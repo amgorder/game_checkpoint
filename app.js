@@ -5,22 +5,22 @@ let bonusPerSec = 0
 let store = {
     moonRocks1: {
         price: 50, 
-        seconds: 1, 
+        seconds: 1000, 
         modifier: 5
     },
     moonRocks2: {
         price: 100, 
-        seconds: 3, 
+        seconds: 3000, 
         modifier: 10
     },
     moonRocks3: {
         price: 150, 
-        seconds: 5, 
+        seconds: 5000, 
         modifier: 15
     },
     moonRocks4: {
         price: 200, 
-        seconds: 7, 
+        seconds: 7000, 
         modifier: 20
     }
 
@@ -42,11 +42,30 @@ function mod1(){
     if(resources >= store.moonRocks1.price){
         resources -= store.moonRocks1.price
         moonRocks += store.moonRocks1.modifier
-        
         store.moonRocks1.price++
     }
+    draw()
     moonRockMultiplier1()
 }
+function moonRockMultiplier1(){ 
+        resources += store.moonRocks1.modifier
+        document.getElementById("multi").innerHTML = `${store.moonRocks1.modifier}`
+        draw()
+        threeSecInter()
+    }  
+        let threeSec
+        function threeSecInter() {
+            threeSec = setInterval(moonRockMultiplier1, store.moonRocks1.seconds)
+            endThreeSecInter()
+        }
+        let endThreeSec
+        function endThreeSecInter() {
+            endThreeSec = clearInterval(threeSec)
+        }
+
+
+
+
 function mod2(){
     if(resources >= store.moonRocks2.price){
         resources -= store.moonRocks2.price
@@ -71,20 +90,6 @@ function mod4(){
     }
     draw()
 }
-
-function moonRockMultiplier1(){
-    resources += store.moonRocks1.modifier
-    
-    draw()
-}
-function timer(){
-    let seconds = 1000
-    let newTimer = setInterval(moonRockMultiplier1, 3*seconds)
-    let clearNewTimer = function(){
-        clearInterval(newTimer)
-    }
-    setTimeout(clearNewTimer, 10*seconds)
-}
 function draw(){
     document.getElementById("resources").innerHTML = `${resources}`
     document.getElementById("moon_rocks").innerHTML = `${moonRocks}`
@@ -96,5 +101,5 @@ function draw(){
 
 
 }
-
+//page refresh
 draw()

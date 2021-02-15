@@ -38,6 +38,7 @@ resources++
 }
 }
 //store modifiers
+//the functions below repeat. find out how to make this repeatable using different array values from store.
 function mod1(){
     if(resources >= store.moonRocks1.price){
         resources -= store.moonRocks1.price
@@ -52,7 +53,6 @@ function moonRockMultiplier1(){
         document.getElementById("multi").innerHTML = `${store.moonRocks1.modifier}`
         draw() 
     }  
-
 function mod2(){
     if(resources >= store.moonRocks2.price){
         resources -= store.moonRocks2.price
@@ -109,4 +109,3 @@ function draw(){
 }
 //page refresh
 draw()
-setTimeout(moonRockMultiplier1, 30000)
